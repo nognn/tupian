@@ -1,0 +1,20 @@
+name: Upload Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Upload Image
+        uses: actions/upload-artifact@v2
+        with:
+          name: image
+          path: D:/tupian/images
+
